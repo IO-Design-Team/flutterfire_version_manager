@@ -1,6 +1,7 @@
 name: flutterfire_version_manager
 description: A CLI tool to lock all FlutterFire dependencies to compatible versions
 version: 0.1.0
+homepage: https://github.com/IO-Design-Team/flutterfire_version_manager
 
 environment:
   sdk: ^3.0.0
