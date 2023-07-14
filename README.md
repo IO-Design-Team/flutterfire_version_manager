@@ -1,39 +1,23 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The FlutterFire packages do not properly follow semver, and all packages must be on the versions released together. This causes issues downgrading a package, as it will be incompatible with the other FlutterFire packages. The `ffvm` tool aims to solve this by allowing you to specify what package and version you want to use, and it will lock all the other packages to the appropriate versions.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Lock all FlutterFire packages to versions compatible with the specified package and version
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```console
+dart pub global activate ffvm
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```console
+ffvm <package> <version>
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Hopefully in the future this package will not be necessary
+
+If you maintain any third party FlutterFire packages that are affected by this, please create an issue and I will add them to the list of packages that are locked
