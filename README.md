@@ -7,7 +7,7 @@ Lock all FlutterFire packages to versions compatible with the specified package 
 ## Getting started
 
 ```console
-dart pub global activate ffvm
+dart pub global activate flutterfire_version_manager
 ```
 
 ## Usage
