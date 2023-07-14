@@ -1,0 +1,13 @@
+name: flutterfire_version_manager
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+
+environment:
+  sdk: ^3.0.5
+
+dependencies:
+
+dev_dependencies:
+
+  rexios_lints: ^5.0.0
+  test: ^1.21.0
