@@ -5,6 +5,9 @@ import 'package:pub_api_client/pub_api_client.dart';
 import 'package:pubspec/pubspec.dart';
 
 final dateFormat = DateFormat('MM/dd/yy hh:mm:ss');
+const thirdPartyPackages = [
+  'firebase_ui_oauth_oidc',
+];
 
 void main(List<String> arguments) async {
   if (arguments.length != 2) {
@@ -26,9 +29,10 @@ void main(List<String> arguments) async {
 
   print('Fetching packages created by firebase.google.com...');
   final client = PubClient();
-  final ffPackages =
+  final ffPackages = thirdPartyPackages +
       (await client.fetchPublisherPackages('firebase.google.com'))
-          .map((e) => e.package);
+          .map((e) => e.package)
+          .toList();
   print('Found ${ffPackages.length} packages');
 
   if (!ffPackages.contains(lockPackage)) {
