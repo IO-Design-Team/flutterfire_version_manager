@@ -7,6 +7,9 @@ import 'package:pubspec/pubspec.dart';
 final dateFormat = DateFormat('MM/dd/yy hh:mm:ss');
 const thirdPartyPackages = [
   'firebase_ui_oauth_oidc',
+  'firebase_auth_mocks',
+  'firebase_storage_mocks',
+  'fake_cloud_firestore',
 ];
 
 void main(List<String> arguments) async {
