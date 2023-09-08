@@ -1,3 +1,6 @@
+## 0.1.3
+- Also lock dev dependencies
+
 ## 0.1.2
 - Adds `firebase_auth_mocks`, `firebase_storage_mocks`, and `fake_cloud_firestore` to third party locked packages
 

@@ -52,7 +52,7 @@ void main(List<String> arguments) async {
 
   final ffDeps = ffPackages
       .toSet()
-      .intersection(pubspec.dependencies.keys.toSet())
+      .intersection(pubspec.allDependencies.keys.toSet())
     ..remove(lockPackage);
 
   final lockedVersions = {lockPackage: lockVersion};
