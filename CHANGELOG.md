@@ -1,3 +1,7 @@
+## 0.1.7
+
+- Replaces discontinued `pubspec` package with `pubspec_parse`
+
 ## 0.1.6
 
 - Dependency upgrades

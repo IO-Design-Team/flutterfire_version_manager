@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:intl/intl.dart';
 import 'package:pub_api_client/pub_api_client.dart';
-import 'package:pubspec/pubspec.dart';
+import 'package:pubspec_parse/pubspec_parse.dart';
 
 final dateFormat = DateFormat('MM/dd/yy hh:mm:ss');
 const thirdPartyPackages = [
@@ -11,6 +11,13 @@ const thirdPartyPackages = [
   'firebase_storage_mocks',
   'fake_cloud_firestore',
 ];
+
+extension on Pubspec {
+  Map<String, Dependency> get allDependencies => {
+        ...dependencies,
+        ...devDependencies,
+      };
+}
 
 void main(List<String> arguments) async {
   if (arguments.length != 2) {
@@ -28,7 +35,7 @@ void main(List<String> arguments) async {
   }
 
   final pubspecString = pubspecFile.readAsStringSync();
-  final pubspec = PubSpec.fromYamlString(pubspecString);
+  final pubspec = Pubspec.parse(pubspecString);
 
   print('Fetching packages created by firebase.google.com...');
   final client = PubClient();
