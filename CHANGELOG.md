@@ -1,3 +1,7 @@
+## 0.1.8
+
+- Updates `pub_api_client` to `^4.0.0`
+
 ## 0.1.7
 
 - Replaces discontinued `pubspec` package with `pubspec_parse`
