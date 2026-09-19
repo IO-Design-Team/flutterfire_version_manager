@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:intl/intl.dart';
-import 'package:pub_api_client/pub_api_client.dart';
+import 'package:pub_api_client/pub_api_client.dart' show PubClient;
 import 'package:pubspec_parse/pubspec_parse.dart';
 
 final dateFormat = DateFormat('MM/dd/yy hh:mm:ss');
